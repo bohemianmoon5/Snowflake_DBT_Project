@@ -7,7 +7,7 @@ dbt_demo:
       user: 'not needed'
       role: accountadmin
       database: p_source_db
-      schema: dev
+      schema: p_source_schema
       warehouse: compute_wh
     prod:
       type: snowflake
@@ -15,5 +15,5 @@ dbt_demo:
       user: 'not needed'
       role: accountadmin
       database: p_mart
-      schema: prod
+      schema: p_mart_schema
       warehouse: compute_wh
