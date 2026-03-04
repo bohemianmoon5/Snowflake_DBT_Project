@@ -1,5 +1,5 @@
-# Getting Started with dbt on Snowflake
+# Snowflake DBT Project
 
 ## Overview
 
-This repository contains an example dbt project to get you started with dbt on Snowflake. 
+dbt project on Snowflake. 
