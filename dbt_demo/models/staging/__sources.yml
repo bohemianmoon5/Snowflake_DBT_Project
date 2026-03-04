@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: p_source
     database: p_source_db
-    schema: RAW
+    schema: p_source_schema
 
     tables:
       - name: CAMPAIGN_PERFORMANCE
