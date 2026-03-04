@@ -1,2 +1,2 @@
 SELECT *
-FROM {{ source('p_source', 'campaigns') }}
+FROM {{ source('p_source', 'P_CAMPAIGNS') }}
