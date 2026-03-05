@@ -1,8 +1,8 @@
 ## Project
-name: dbt_demo
+name: DBT_Chart_2
 version: "1.0"
 config-version: 2
-profile: dbt_demo
+profile: DBT_Chart_2
 
 ## Sources
 model-paths: [models]
@@ -18,7 +18,7 @@ clean-targets: [target, dbt_modules]
 
 ## Models
 models:
-  dbt_demo:
+  DBT_Chart_2:
     staging:
       +materialized: view
     marts:
