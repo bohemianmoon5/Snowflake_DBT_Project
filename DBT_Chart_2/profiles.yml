@@ -1,4 +1,4 @@
-dbt_demo:
+DBT_Chart_2:
   target: dev
   outputs:
     dev:
