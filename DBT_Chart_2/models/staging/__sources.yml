@@ -7,16 +7,4 @@ sources:
 
     tables:
       - name: CAMPAIGN_PERFORMANCE
-      - name: EVENTS
-      - name: FIRST_TOUCH
-      - name: LAST_TOUCH
-      - name: LINEAR
-      - name: TIME_DECAY
       - name: P_CAMPAIGNS
-      - name: P_CAMPAIGNS_SILVER
-      - name: P_EVENTS
-      - name: P_PRODUCTS
-      - name: P_TRANSACTIONS
-      - name: TRANSACTIONS
-      - name: S_MEMBER
-      - name: S_MEMBER_PROFILE
