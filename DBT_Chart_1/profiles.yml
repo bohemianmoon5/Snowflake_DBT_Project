@@ -1,0 +1,9 @@
+DBT_Chart_1:
+  target: prd
+  outputs:
+    prd:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: P_MART
+      schema: P_MART_SCHEMA
