@@ -2,6 +2,6 @@ name: DBT_Chart_1
 version: '1.0.0'
 config-version: 2
 
-profile: 'DBT_TEST'
+profile: 'DBT_Chart_1'
 
 model-paths: ["models"]
