@@ -1,0 +1,9 @@
+DBT_Chart_4:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: P_SOURCE_DB
+      schema: P_SOURCE_SCHEMA

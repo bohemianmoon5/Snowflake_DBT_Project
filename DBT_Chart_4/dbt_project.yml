@@ -1,0 +1,19 @@
+name: DBT_Chart_4
+version: 1.0.0
+config-version: 2
+profile: DBT_Chart_4
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+models:
+  DBT_Chart_4:
+    +materialized: view
