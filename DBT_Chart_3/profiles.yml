@@ -1,9 +1,11 @@
 DBT_Chart_3:
-  target: dev
+  target: prd
   outputs:
-    dev:
+    prd:
       type: snowflake
+      account: yz80908
+      user: SEONGCHEON_NA
       role: ACCOUNTADMIN
       warehouse: COMPUTE_WH
-      database: P_SOURCE_DB
-      schema: P_SOURCE_SCHEMA
+      database: P_MART
+      schema: P_MART_SCHEMA

@@ -16,4 +16,4 @@ snapshot-paths:
   - snapshots
 models:
   DBT_Chart_3:
-    +materialized: view
+    +materialized: table
