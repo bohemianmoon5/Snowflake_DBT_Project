@@ -7,3 +7,4 @@ sources:
     tables:
       - name: p_events
       - name: p_transactions
+      - name: first_touch
