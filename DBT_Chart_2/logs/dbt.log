@@ -563,3 +563,123 @@ alter session unset quoted_identifiers_ignore_case;
 [0m08:23:59.678094 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 3.8211663, "process_in_blocks": "0", "process_kernel_time": 1.01, "process_mem_max_rss": "479556", "process_out_blocks": "0", "process_user_time": 6.28}
 [0m08:23:59.678921 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 08:23:59.678644 after 3.82 seconds
 [0m08:23:59.679477 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:05:01.552916 | cd9301dd-b298-43cd-83ff-9846da1b17ac ==============================
+[0m10:05:01.552916 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:05:01.554052 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'profiles_dir': '/tmp/dbt/', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'introspect': 'True', 'target_path': '/tmp/dbt/target/', 'static_parser': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:05:01.921209 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:05:02.483217 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:05:02.744544 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:05:02.745241 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:05:03.014516 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:05:03.017186 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:05:03.058730 [info ] [Dummy-1   ]: Found 3 models, 2 sources, 476 macros
+[0m10:05:03.061498 [info ] [Dummy-1   ]: 
+[0m10:05:03.062091 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m10:05:03.062571 [info ] [Dummy-1   ]: 
+[0m10:05:03.063438 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:05:03.071150 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_p_source_db_p_source_schema'
+[0m10:05:03.182970 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:05:03.183615 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:05:03.184123 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:05:03.532538 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.348 seconds
+[0m10:05:03.538265 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:05:03.538937 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+show objects in p_source_db.p_source_schema
+    limit 10000
+    
+;
+[0m10:05:03.636032 [debug] [ThreadPool]: SQL status: SUCCESS 22 in 0.096 seconds
+[0m10:05:03.639465 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:05:03.640018 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:05:03.691037 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.050 seconds
+[0m10:05:03.707229 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.raw_campaign_performance
+[0m10:05:03.708020 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_p_source_db_p_source_schema, now model.DBT_Chart_2.raw_campaign_performance)
+[0m10:05:03.708712 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.raw_campaign_performance
+[0m10:05:03.720225 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.raw_campaign_performance"
+[0m10:05:03.721091 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.raw_campaign_performance
+[0m10:05:03.722142 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.raw_campaign_performance
+[0m10:05:03.722823 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.raw_campaigns
+[0m10:05:03.724805 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.DBT_Chart_2.raw_campaign_performance, now model.DBT_Chart_2.raw_campaigns)
+[0m10:05:03.725423 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.raw_campaigns
+[0m10:05:03.730516 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.raw_campaigns"
+[0m10:05:03.731325 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.raw_campaigns
+[0m10:05:03.732277 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.raw_campaigns
+[0m10:05:03.733491 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.load_monthly_performance
+[0m10:05:03.734399 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.DBT_Chart_2.raw_campaigns, now model.DBT_Chart_2.load_monthly_performance)
+[0m10:05:03.734964 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.load_monthly_performance
+[0m10:05:03.740449 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.load_monthly_performance"
+[0m10:05:03.741247 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.load_monthly_performance
+[0m10:05:03.742239 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.load_monthly_performance
+[0m10:05:03.744287 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:05:03.744828 [debug] [Dummy-1   ]: Connection 'model.DBT_Chart_2.load_monthly_performance' was properly closed.
+[0m10:05:03.746070 [debug] [Dummy-1   ]: Command end result
+[0m10:05:03.775365 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:05:03.777747 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:05:03.786677 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:05:03.788645 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.333381, "process_in_blocks": "0", "process_kernel_time": 0.88, "process_mem_max_rss": "433840", "process_out_blocks": "0", "process_user_time": 5.15}
+[0m10:05:03.789379 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 10:05:03.789077 after 2.33 seconds
+[0m10:05:03.789946 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 10:35:50.213987 | 7ca3d95a-aeb2-42e2-ac50-7b57a65ee7b5 ==============================
+[0m10:35:50.213987 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m10:35:50.214994 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt ', 'log_format': 'default', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m10:35:50.565747 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m10:35:51.113989 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m10:35:51.348038 [debug] [Dummy-1   ]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m10:35:51.348725 [debug] [Dummy-1   ]: Partial parsing enabled, no changes found, skipping parsing
+[0m10:35:51.592565 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:35:51.594959 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:35:51.634297 [info ] [Dummy-1   ]: Found 3 models, 2 sources, 476 macros
+[0m10:35:51.636739 [info ] [Dummy-1   ]: 
+[0m10:35:51.637285 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m10:35:51.637764 [info ] [Dummy-1   ]: 
+[0m10:35:51.638606 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m10:35:51.645288 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_p_source_db_p_source_schema'
+[0m10:35:51.753098 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:35:51.753703 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m10:35:51.754227 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:35:52.134959 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.381 seconds
+[0m10:35:52.140615 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:35:52.141174 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+show objects in p_source_db.p_source_schema
+    limit 10000
+    
+;
+[0m10:35:52.272870 [debug] [ThreadPool]: SQL status: SUCCESS 22 in 0.131 seconds
+[0m10:35:52.276219 [debug] [ThreadPool]: Using snowflake connection "list_p_source_db_p_source_schema"
+[0m10:35:52.276756 [debug] [ThreadPool]: On list_p_source_db_p_source_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "DBT_Chart_2", "target_name": "dev", "connection_name": "list_p_source_db_p_source_schema"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m10:35:52.331444 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.054 seconds
+[0m10:35:52.346140 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.raw_campaign_performance
+[0m10:35:52.346856 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_p_source_db_p_source_schema, now model.DBT_Chart_2.raw_campaign_performance)
+[0m10:35:52.347428 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.raw_campaign_performance
+[0m10:35:52.358662 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.raw_campaign_performance"
+[0m10:35:52.359510 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.raw_campaign_performance
+[0m10:35:52.360521 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.raw_campaign_performance
+[0m10:35:52.361195 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.raw_campaigns
+[0m10:35:52.363108 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.DBT_Chart_2.raw_campaign_performance, now model.DBT_Chart_2.raw_campaigns)
+[0m10:35:52.363713 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.raw_campaigns
+[0m10:35:52.368730 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.raw_campaigns"
+[0m10:35:52.369500 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.raw_campaigns
+[0m10:35:52.370457 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.raw_campaigns
+[0m10:35:52.371673 [debug] [Thread-2 (]: Began running node model.DBT_Chart_2.load_monthly_performance
+[0m10:35:52.372453 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.DBT_Chart_2.raw_campaigns, now model.DBT_Chart_2.load_monthly_performance)
+[0m10:35:52.373009 [debug] [Thread-2 (]: Began compiling node model.DBT_Chart_2.load_monthly_performance
+[0m10:35:52.378392 [debug] [Thread-2 (]: Writing injected SQL for node "model.DBT_Chart_2.load_monthly_performance"
+[0m10:35:52.379194 [debug] [Thread-2 (]: Began executing node model.DBT_Chart_2.load_monthly_performance
+[0m10:35:52.380143 [debug] [Thread-2 (]: Finished running node model.DBT_Chart_2.load_monthly_performance
+[0m10:35:52.382181 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m10:35:52.382691 [debug] [Dummy-1   ]: Connection 'model.DBT_Chart_2.load_monthly_performance' was properly closed.
+[0m10:35:52.383900 [debug] [Dummy-1   ]: Command end result
+[0m10:35:52.412587 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m10:35:52.414620 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m10:35:52.423212 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m10:35:52.424937 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.3050265, "process_in_blocks": "0", "process_kernel_time": 0.93, "process_mem_max_rss": "428224", "process_out_blocks": "0", "process_user_time": 4.68}
+[0m10:35:52.425606 [debug] [Dummy-1   ]: Command `cli compile` succeeded at 10:35:52.425338 after 2.31 seconds
+[0m10:35:52.426168 [debug] [Dummy-1   ]: Flushing usage events
